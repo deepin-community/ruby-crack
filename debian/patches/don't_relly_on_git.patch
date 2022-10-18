@@ -1,0 +1,20 @@
+Description: For ruby integration,dont relly on git
+Author: Abhijith PA <abhijith@openmailbox.org>
+Date: 29/10/2015
+
+Index: ruby-crack/crack.gemspec
+===================================================================
+--- ruby-crack.orig/crack.gemspec
++++ ruby-crack/crack.gemspec
+@@ -8,8 +8,9 @@ Gem::Specification.new do |gem|
+   gem.summary       = %q{Really simple JSON and XML parsing, ripped from Merb and Rails.}
+   gem.homepage      = "http://github.com/jnunemaker/crack"
+ 
+-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+-  gem.files         = `git ls-files -- lib/*`.split("\n")
++  gem.executables   = Dir.glob('bin/*')
++  gem.files         = Dir.glob('**/*').reject { |s| File.directory?(s) || s =~ /^debian/ }
++
+   gem.name          = "crack"
+   gem.require_paths = ["lib"]
+   gem.version       = Crack::VERSION

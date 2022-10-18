@@ -1,0 +1,120 @@
+ruby-crack (0.4.4-2) unstable; urgency=medium
+
+  * Update standards version to 4.5.1, no changes needed.
+  * Update pattern for GitHub archive URLs
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 30 Jun 2021 15:23:46 +0900
+
+ruby-crack (0.4.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Refresh debian/patches/don't_relly_on_git.patch
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 22 Sep 2020 13:48:20 +0900
+
+ruby-crack (0.4.3-5) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Hideki Yamane ]
+  * debian/control
+    - Update standards version to 4.5.0, no changes needed.
+    - Set debhelper-compat (= 13)
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 24 Jun 2020 19:49:17 +0900
+
+ruby-crack (0.4.3-4) unstable; urgency=medium
+
+  * debian/control
+    - use dh12
+    - set Standards-Version: 4.4.1
+    - add Rules-Requires-Root: no
+  * debian/watch: use v4 syntax
+  * add debian/salsa-ci.yml
+  * add debian/gbp.conf
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 13 Oct 2019 00:45:52 +0900
+
+ruby-crack (0.4.3-3) unstable; urgency=medium
+
+  * debian/control
+    - move Vcs-* to salsa.debian.org
+    - set Standards-Version: 4.2.1
+    - drop deprecated "Depends: ruby-interpreter"
+    - Add Testsuite: autopkgtest-pkg-ruby
+  * debian/copyright
+    -use https
+    - update copyright year
+  * use dh11
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 14 Oct 2018 03:08:59 +0900
+
+ruby-crack (0.4.3-2) unstable; urgency=medium
+
+  * debian/control
+    - set Standards-Version: 4.1.1
+    - set Build-Depends: debhelper (>= 10)
+  * debian/compat
+    - set 10
+
+  [ Cédric Boutillier ]
+  * Use https:// in Vcs-* fields
+  * Run wrap-and-sort on packaging files
+  * Remove version in the gem2deb build-dependency
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 25 Oct 2017 04:27:14 +0900
+
+ruby-crack (0.4.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 19 Dec 2015 22:57:13 +0900
+
+ruby-crack (0.4.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Add debian/patches
+   + don't_relly_on_git.patch fixes ruby gems integration (Closes: #768944)
+
+  [ Pirate Praveen ]
+  * Check gemspec dependencies during build
+
+ -- Abhijith PA <abhijith@openmailbox.org>  Mon, 19 Oct 2015 19:13:59 +0530
+
+ruby-crack (0.4.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Add also ruby-safe-yaml to Depends, as it is required by the library.
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 29 Apr 2014 11:10:25 +0200
+
+ruby-crack (0.4.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control
+    - set Standards-Version: 3.9.5
+    - add "Build-Depends: ruby-safe-yaml" to fix test failure
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 26 Feb 2014 21:32:27 +0900
+
+ruby-crack (0.4.1-1) unstable; urgency=low
+
+  * Team upload
+  * Imported Upstream version 0.4.1
+    + fix problems with Psych YAML engine (Closes: #720234)
+  * Tests now use ruby-minitest instead of ruby-shoulda
+  * Drop all patches, not needed anymore
+  * debian/ruby-crack.docs: README is now markdown
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 03 Oct 2013 10:47:36 +0200
+
+ruby-crack (0.3.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #623900)
+  * Initial packaging by Hideki Yamane
+  * Help from Cédric Boutillier with failing tests
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Wed, 15 May 2013 18:54:13 +0530

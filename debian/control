@@ -1,0 +1,32 @@
+Source: ruby-crack
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Hideki Yamane <henrich@debian.org>,
+           Praveen Arimbrathodiyil <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               rake,
+               ruby-jnunemaker-matchy,
+               ruby-minitest,
+               ruby-safe-yaml (>= 1.0.0~)
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-crack.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-crack
+Homepage: https://github.com/jnunemaker/crack
+XS-Ruby-Versions: all
+Testsuite: autopkgtest-pkg-ruby
+Rules-Requires-Root: no
+
+Package: ruby-crack
+Architecture: all
+Depends: ruby,
+         ruby-safe-yaml (>= 1.0.0~),
+         ${misc:Depends},
+         ${shlibs:Depends}
+XB-Ruby-Versions: ${ruby:Versions}
+Description: Ruby library to parse XML and JSON
+ Crack is a really simple JSON and XML parsing Ruby library.
+ .
+ XML parser is ripped from Merb and the JSON parser is ripped from Rails.
+ Just packaged them for all to enjoy and easily use.
